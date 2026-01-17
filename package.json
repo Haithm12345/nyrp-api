@@ -1,20 +1,16 @@
 {
-  "name": "nyrp-bot",
+  "name": "nyrp-api",
   "version": "1.0.0",
-  "description": "Discord bot for NYRP live sessions",
-  "main": "index.js",
-  "type": "commonjs",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "engines": {
-    "node": ">=18.12.0"
+    "node": ">=18"
   },
   "dependencies": {
+    "express": "^4.19.2",
     "cors": "^2.8.5",
-    "discord.js": "^14.25.1",
-    "dotenv": "^17.2.3",
-    "express": "^5.2.1",
-    "node-fetch": "^2.7.0"
+    "dotenv": "^16.4.5"
   }
 }
