@@ -13,8 +13,8 @@ const API_KEY = process.env.API_KEY;              // from your .env
 const API_BASE_URL = process.env.API_BASE_URL;    // https://nyrp-api.onrender.com (if you ever call yourself)
 
 // If/when you add ER:LC keys, put them in .env as well:
-// const ERLC_SERVER_TOKEN = process.env.ERLC_SERVER_TOKEN;
-// const ERLC_GLOBAL_TOKEN = process.env.ERLC_GLOBAL_TOKEN;
+const ERLC_SERVER_TOKEN = process.env.ERLC_SERVER_TOKEN;
+ const ERLC_GLOBAL_TOKEN = process.env.ERLC_GLOBAL_TOKEN;
 
 // ----- AUTH MIDDLEWARE (for your dashboard/frontend) -----
 app.use((req, res, next) => {
@@ -26,10 +26,10 @@ app.use((req, res, next) => {
 });
 
 // ----- OPTIONAL ER:LC CLIENT (uncomment when you have keys) -----
-// const erlcClient = axios.create({
-//     baseURL: 'https://api.policeroleplay.community',
-//     timeout: 5000,
-// });
+const erlcClient = axios.create({
+    baseURL: 'https://api.policeroleplay.community',
+     timeout: 5000,
+ });
 
 // ----- PLACEHOLDER STATE (replace with live ER:LC calls when ready) -----
 let playersOnline = 1;
